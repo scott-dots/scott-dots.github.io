@@ -1,13 +1,12 @@
-title: spacetimedistortion
+title: Waves Theme
 author:
-  name: land back
-  email: setthelandfree@gmail.com
+  name: author
+  email: email@email.me
 description: >
-  free the land, free the people
+  a theme for jekyll
 github:
-  username: setthelandfree
-  repo: setthelandfree.github.io
-patreon: https://patreon.com/spacetimedistortion123
+  username: user
+  repo: user.github.io
 permalink: /:categories/:title/
 
 theme: minima
@@ -20,23 +19,7 @@ minima:
   skin: solarized
 
 collections:
-  yosemite:
-    output: true
   documents:
-    output: true
-  nps:
     output: true
     
 excerpt_separator: <!--more-->
-
-prose:
-  metadata:
-    _yosemite:
-      - name: "layout"
-        field:
-          element: "hidden"
-          value: "page"
-      - name: "title"
-        field:
-          element: "text"
-          label: "title"
