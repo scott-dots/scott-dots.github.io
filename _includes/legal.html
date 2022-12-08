@@ -1,0 +1,14 @@
+{% assign documents = site.documents | sort: 'weight' %}
+{% for doc in documents %}
+{% unless doc.title == "documents" %}
+<div>
+  <a href="{{ doc.url | relative_url }}">{{ doc.title }}</a>
+</div>
+{% endunless %}
+{% endfor %}
+{% if site.github %}
+<div>
+  <a href="https://github.com/{{ site.github.username }}/{{ site.github.repo }}/blob/main/LICENSE.md">Software</a>
+</div>
+{% endif %}
+ 

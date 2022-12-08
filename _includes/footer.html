@@ -1,0 +1,26 @@
+<footer class="site-footer">
+  
+  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+  <script type="text/javascript" src="{{ "/assets/progress.js" | relative_url }}"></script>
+
+  <p class="foot-info">{{ site.description | escape }}</p>
+  
+  {% include petition.html %}
+  
+  <div class="docs">
+    
+    <details>
+      <summary>
+        <div class="copyright">{{ site.title }}&nbsp;{{ "now" | date: "%Y" }}&copy;</div>
+        <div class="logo-grayscale"></div>
+      </summary>
+      <figure>
+      {% include legal.html %}  
+      </figure>
+    </details>
+    
+    {% include foot-links.html %}
+    
+  </div>
+  
+</footer>
