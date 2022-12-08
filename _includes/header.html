@@ -18,7 +18,7 @@
         </label>
 
         <div class="trigger">
-          {% if site.author.phone %}<a class="phone" href="tel:+12345678910">{% site.author.phone %}</a>{% endif %}
+          {% if site.author.phone %}<a class="phone" href="tel:{% site.author.phone %}">call</a>{% endif %}
           {%- for path in page_paths -%}
             {%- assign my_page = site.pages | where: "path", path | first -%}
             {%- if my_page.title and my_page.menu != false -%}
