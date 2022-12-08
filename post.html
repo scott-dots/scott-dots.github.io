@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<article>
+  
+  {% include post-nav.js %}
+  
+  <header class="splash" style="{% if page.splash %}background-image: url(//images.weserv.nl/?url={{site.url}}{{page.splash}}&h=1200&output=jpg&q=85);{% else %}background-image: conic-gradient(from 124deg at 38% 31%, #ff4800 10%, #dfd902 35%, #20dc68, #0092f4, #da54d8 72% 75%, #ff4800 95%);opacity: .89;{% endif %}">
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+    {% if page.subtitle %}<em class="post-subtitle">{{ page.subtitle | escape }}</em>{% endif %}
+    {% if page.author %}
+      <p class="post-author"><a><u>{{ page.author | escape }}</u></a></p>
+    {% else if page.author != '' %}
+      <p class="post-author"><a><u>{{ site.author.name | escape }}</u></a></p>
+    {% endif %}
+  </header>
+  
+  <div class="post">
+    <div class="content">
+      {{ content }}
+    </div>
+  </div>
+
+</article>
