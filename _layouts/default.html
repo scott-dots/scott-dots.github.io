@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {% if page.redirect %}
+  <link rel="canonical" href="{{ page.redirect }}"/>
+  <meta http-equiv="refresh" content="0; url={{ page.redirect }}">
+  {% endif %}
+  
+  {%- include head.html -%}
+
+  <body>
+
+    {%- include header.html -%}
+
+    <main aria-label="Content">
+      
+        {{ content }}
+      
+        {% if page.redirect %}<h3> Redirecting to <a href="{{ page.redirect }}">{{ page.redirect }}</a> ...</h3>{% endif %}
+          
+    </main>
+
+    {%- include footer.html -%}
+    {%- include pendo.html -%}
+    
+  </body>
+
+</html>
