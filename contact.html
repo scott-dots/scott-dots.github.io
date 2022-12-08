@@ -1,0 +1,9 @@
+---
+layout: page
+---
+#contact:
+{% for contact in site.author %}
+{{ contact.author }}
+{{ contact.email }}
+{{ contact.phone }}
+{% endfor %}

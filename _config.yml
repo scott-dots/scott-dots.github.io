@@ -1,0 +1,42 @@
+title: spacetimedistortion
+author:
+  name: land back
+  email: setthelandfree@gmail.com
+description: >
+  free the land, free the people
+github:
+  username: setthelandfree
+  repo: setthelandfree.github.io
+patreon: https://patreon.com/spacetimedistortion123
+permalink: /:categories/:title/
+
+theme: minima
+
+plugins: 
+  - jekyll-feed
+  - jekyll-seo-tag
+
+minima:
+  skin: solarized
+
+collections:
+  yosemite:
+    output: true
+  documents:
+    output: true
+  nps:
+    output: true
+    
+excerpt_separator: <!--more-->
+
+prose:
+  metadata:
+    _yosemite:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "page"
+      - name: "title"
+        field:
+          element: "text"
+          label: "title"
